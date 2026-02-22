@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Registry System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>SYSTEM_REGISTRY<span>_v1.0</span></h1>
+        </header>
+        <section class="project-info">
+    <div class="terminal-header">PROJECT_METADATA</div>
+    <p>
+        <span class="label">ORIGEM:</span> Avaliação Técnica - Infinity School.<br>
+        <span class="label">STATUS:</span> Requisitos base cumpridos. <br>
+        <span class="label">NOTAS:</span> Sistema de persistência (CRUD), arquitetura multi-página e interface estilizada em tons de cinza foram implementados como melhorias autorais.
+    </p>
+</section>
+
+        <section class="form-section">
+            <h2 id="form-title">NOVO_CADASTRO</h2>
+            <form id="cadastroForm">
+                <input type="hidden" id="editIndex" value="-1">
+                
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label>NOME_COMPLETO</label>
+                        <input type="text" id="nome" placeholder="Digite o nome...">
+                        <div id="error-nome" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>USER_ID</label>
+                        <input type="text" id="usuario" placeholder="Username">
+                        <div id="error-usuario" class="error-message"></div>
+                    </div>
+                </div>
+
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label>EMAIL_ADDRESS</label>
+                        <input type="email" id="email" placeholder="email@tech.com">
+                        <div id="error-email" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>PASSWORD</label>
+                        <input type="password" id="senha" placeholder="******">
+                        <div id="error-senha" class="error-message"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>DATA_NASCIMENTO</label>
+                    <input type="date" id="dataNascimento">
+                    <div id="error-dataNascimento" class="error-message"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btn-submit">EXECUTAR_CADASTRO</button>
+                    <button type="button" id="btn-cancel" class="btn-secondary" style="display: none;">CANCELAR</button>
+                </div>
+            </form>
+            <div id="mensagemSucesso" class="success-message"></div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="list-section">
+            <h2>DATABASE_USERS</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>USUÁRIO</th>
+                            <th>E-MAIL</th>
+                            <th>IDADE</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaUsuarios">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

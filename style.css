@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #0d0d0d;
+    --panel-color: #1a1a1a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #888;
+    --accent-color: #00ff41; /* Verde Matrix sutil */
+    --border-color: #333;
+    --input-bg: #222;
+}
+.project-info {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 2px solid var(--accent-color);
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    border: 1px solid #222;
+    border-left: 3px solid var(--accent-color);
+}
+
+.terminal-header {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.project-info p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.project-info .label {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--panel-color);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1 { font-size: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 10px; margin-bottom: 30px; }
+h1 span { color: var(--text-secondary); font-size: 0.8rem; }
+h2 { font-size: 1rem; color: var(--text-secondary); margin-bottom: 20px; }
+
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.form-group { margin-bottom: 15px; }
+label { display: block; font-size: 0.75rem; margin-bottom: 5px; color: var(--accent-color); }
+
+input {
+    width: 100%;
+    padding: 10px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: white;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus { border-color: var(--accent-color); }
+
+button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+button:hover { background: var(--accent-color); color: black; }
+
+.btn-secondary { border-color: #ff4444; color: #ff4444; margin-left: 10px; }
+.btn-secondary:hover { background: #ff4444; color: white; }
+
+.error-message { color: #ff4444; font-size: 0.7rem; height: 14px; margin-top: 4px; }
+.success-message { color: var(--accent-color); margin-top: 10px; font-size: 0.9rem; }
+
+/* Tabela Tech */
+.table-container { overflow-x: auto; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th { text-align: left; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); padding: 10px; }
+td { padding: 10px; border-bottom: 1px solid #222; }
+
+.actions button {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    margin-right: 5px;
+}
